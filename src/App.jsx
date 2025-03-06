@@ -11,15 +11,21 @@ import Notfound from './pages/Notfound'
 const mockData = [
   { 
     id: 1,
-    createdData: new Date().getTime(),
+    createdData: new Date('2025-03-12').getTime(),
     emotionId: 1,
     content: '1번 일기 내용'
   },
   { 
     id: 2,
-    createdData: new Date().getTime(),
+    createdData: new Date('2025-02-12').getTime(),
     emotionId: 2,
     content: '2번 일기 내용'
+  },
+  { 
+    id: 3,
+    createdData: new Date('2025-03-02').getTime(),
+    emotionId: 3,
+    content: '3번 일기 내용'
   },
 ];
 
@@ -40,8 +46,8 @@ function reducer(state, action) {
   }
 }
 
-const DiaryContext = createContext();
-const DiaryDispatchContext = createContext();
+export const DiaryContext = createContext();
+export const DiaryDispatchContext = createContext();
 
 
 function App() {
